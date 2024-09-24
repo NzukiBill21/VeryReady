@@ -1,0 +1,40 @@
+.product-page {
+  padding: 20px;
+  background: radial-gradient(circle, #1c1c1c, #0a0a0a); /* Dark glowing background */
+  color: #ffff66;
+  min-height: 100vh;
+}
+
+.product-page h1 {
+  color: #ffff66;
+  text-shadow: 0px 0px 5px #ffff66;
+}
+
+.product-page img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 15px 0px #ffcc00; /* Glowing border around the product image */
+}
+
+.product-page p {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+button {
+  background-color: #ffcc00; /* Neon yellow */
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #ffff66;
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9900;
+  box-shadow: 0px 0px 20px #ffcc00;
+}

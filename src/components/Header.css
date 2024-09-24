@@ -1,0 +1,17 @@
+.header {
+    background: linear-gradient(to right, #ffcc00, #333);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header nav {
+    margin-top: 10px;
+  }
+  
+  .header a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
