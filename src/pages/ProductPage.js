@@ -1,33 +1,33 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { products } from '../data/products'; // Ensure products are imported correctly
+import { useParams, Link } from 'react-router-dom';
+import products from '../data/products'; // Import the product data from products.js
 
 const ProductPage = ({ addToCart }) => {
-  const { id } = useParams();
-  const product = products.find(p => p.id === Number(id));
-  const navigate = useNavigate();
+  const { id } = useParams();  // Get the product id from the URL
 
-  // Function to handle adding the product to the cart and redirecting to the cart page
-  const handleAddToCart = () => {
-    if (product) { // Ensure the product exists
-      addToCart(product);
-      navigate('/cart'); // Redirect to the Cart page after adding to cart
-    } else {
-      console.error("Product not found!");
-    }
-  };
+  const product = products.find((item) => item.id === parseInt(id));
 
-  // Handle case where product is not found
   if (!product) {
-    return <div>Product not found.</div>;
+    return <p>Product not found!</p>;
   }
+
+  const handleAddToCart = () => {
+    addToCart(product); // Add product to cart
+    alert(`${product.name} has been added to your cart!`); // Notification
+  };
 
   return (
     <div className="product-page">
-      <h1>{product.name}</h1>
-      <p>Price: ${product.price}</p>
-      {product.imageUrl && <img src={product.imageUrl} alt={product.name} />} {/* Display product image */}
-      <button onClick={handleAddToCart}>Add to Cart</button>
+      <div className="product-page-container">
+        <h1 className="product-title">{product.name}</h1>
+        <img src={product.imageUrl} alt={product.name} />
+        <p className="product-description">{product.description}</p>
+        <p className="product-price">Price: ${product.price}</p>
+        <button className="add-to-cart-button" onClick={handleAddToCart}>Add to Cart</button>
+        <Link to="/">
+          <button className="go-back-button">Go Back Home</button>
+        </Link>
+      </div>
     </div>
   );
 };

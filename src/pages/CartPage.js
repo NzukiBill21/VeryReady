@@ -1,24 +1,26 @@
 import React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
 
-const CartPage = () => {
-  const location = useLocation();
-  const history = useHistory();
-  const product = location.state; // Get the product details passed from the HomePage
-
-  const handleAddToCart = () => {
-    // Logic to add the product to the cart goes here
-    alert(`${product.name} has been added to your cart!`);
-    history.push('/'); // Redirect to homepage
-  };
+const CartPage = ({ cartItems, removeFromCart }) => {
+  const totalBalance = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
     <div>
-      <h1>{product.name}</h1>
-      <img src={product.imageUrl} alt={product.name} />
-      <p>Price: ${product.price}</p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <button onClick={() => history.push('/')}>Go Back to Homepage</button>
+      <h2>Your Shopping Cart</h2>
+      {cartItems.length === 0 ? (
+        <p>Your cart is empty.</p>
+      ) : (
+        <>
+          <ul>
+            {cartItems.map(item => (
+              <li key={item.id}>
+                {item.name} - ${item.price}
+                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+          <h3>Total Balance: ${totalBalance.toFixed(2)}</h3>
+        </>
+      )}
     </div>
   );
 };

@@ -1,12 +1,13 @@
 import React from 'react';
-import './NavigationDots.css';
+import { Link } from 'react-router-dom';
+import './NavigationDots.css'; // Make sure you create this CSS file
 
 const NavigationDots = () => {
   return (
-    <div className="navigation-dots">
-      <Link to="/">Home</Link>
-      <Link to="/about">About Us</Link>
-      <Link to="/contact">Contact Us</Link>
+    <div className="nav-dots">
+      <Link to="/" className="nav-dot" title="Home"></Link>
+      <Link to="/about" className="nav-dot" title="About"></Link>
+      <Link to="/cart" className="nav-dot" title="Cart"></Link>
     </div>
   );
 };

@@ -5,9 +5,32 @@
   min-height: 100vh;
 }
 
-.product-page h1 {
-  color: #ffff66;
-  text-shadow: 0px 0px 5px #ffff66;
+.product-title {
+  font-size: 36px;
+  color: #000000; /* Darker color for product title */
+}
+.product.description {
+  font-size: 20px; /* Increase the font size for better readability */
+  color: #160b0b; /* Ensure the description text is white for visibility */
+  line-height: 1.5; /* Add line height for better spacing */
+  padding: 10px; /* Add some padding around the text */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional: Background for contrast */
+  border-radius: 5px; /* Rounded corners for aesthetics */
+}
+
+
+.product-page-container {
+  background-color: rgba(0, 0, 0, 0.9); /* More opaque matte black */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust based on layout */
+}
+
+.product-price {
+  font-size: 24px;
+  color: #000000; /* Darker color for price */
 }
 
 .product-page img {
@@ -17,24 +40,40 @@
   box-shadow: 0px 0px 15px 0px #ffcc00; /* Glowing border around the product image */
 }
 
-.product-page p {
-  color: #ffffff;
-  font-size: 18px;
-}
-
 button {
-  background-color: #ffcc00; /* Neon yellow */
-  color: #000;
+  background-color: yellow;
+  color: black;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-button,
+.go-back-button {
+  margin: 10px; /* Space between buttons */
+  padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0px 0px 10px #ffff66;
-  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838; /* Darker green on hover */
 }
 
 button:hover {
-  background-color: #ff9900;
-  box-shadow: 0px 0px 20px #ffcc00;
+  background-color: black;
+  color: yellow;
+}
+
+.go-back-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+}
+
+.go-back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }

@@ -1,51 +1,33 @@
 import React, { useState } from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import Home from './pages/HomePage';
-import About from './pages/AboutPage';
-import Contact from './pages/ContactPage';
+import { Routes, Route } from 'react-router-dom'; 
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+import AboutPage from './pages/AboutPage';
+import NavigationDots from './components/NavigationDots'; 
 import './App.css';
+import './components/Header.css';
+import './components/ProductCard.css';
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
-    const productInCart = cart.find(item => item.id === product.id);
-    if (productInCart) {
-      setCart(
-        cart.map(item =>
-          item.id === product.id
-            ? { ...productInCart, quantity: productInCart.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }
+    setCartItems((prevItems) => [...prevItems, product]);
   };
 
-  const removeFromCart = (id) => {
-    setCart(cart.filter(item => item.id !== id));
+  const removeFromCart = (productId) => {
+    setCartItems((prevItems) => prevItems.filter(item => item.id !== productId));
   };
 
-  const calculateTotal = () => {
-    return cart.reduce((total, product) => total + product.price * product.quantity, 0);
-  };
-
-  return (
-    <div className="app">
-      <nav className="nav-bar">
-        <Link className="nav-link" to="/">Home</Link>
-        <Link className="nav-link" to="/about">About</Link>
-        <Link className="nav-link" to="/contact">Contact</Link>
-        <Link className="nav-link" to="/cart">Cart ({cart.length})</Link>
-      </nav>
-
+  return ( 
+    <div>
+      <NavigationDots /> 
       <Routes>
-        <Route path="/" element={<Home addToCart={addToCart} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<CartPage cart={cart} calculateTotal={calculateTotal} removeFromCart={removeFromCart} />} />
+        <Route path="/" element={<HomePage addToCart={addToCart} />} />
+        <Route path="/product/:id" element={<ProductPage addToCart={addToCart} />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/cart" element={<CartPage cartItems={cartItems} removeFromCart={removeFromCart} />} />
       </Routes>
     </div>
   );

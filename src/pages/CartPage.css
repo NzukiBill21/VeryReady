@@ -1,18 +1,27 @@
 .cart-page {
   background: radial-gradient(circle, #1c1c1c, #0a0a0a);
-  color: #66c2ff;
+  color: #191b1b;
   min-height: 100vh;
   padding: 20px;
 }
 
 h1, h2, h3 {
-  color: #66baff; 
+  color: #090c0e; 
   text-shadow: 0px 0px 5px #66c2ff; 
 }
 
-ul {
+.cart-items ul {
   list-style-type: none;
   padding: 0;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.cart-total {
+  margin-top: 20px;
 }
 
 li {
@@ -37,4 +46,12 @@ button {
 button:hover {
   background-color: #ff9900;
   box-shadow: 0px 0px 20px #ffcc00;
+}
+.proceed-btn {
+  background-color: green;
+  color: white;
+}
+
+.proceed-btn:hover {
+  background-color: darkgreen;
 }
