@@ -1,33 +1,32 @@
 .nav-dots {
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
+  top: 20px; 
+  left: 20px; 
   display: flex;
-  flex-direction: column; /* Align vertically */
-  gap: 10px; /* Space between dots */
+  flex-direction: column; 
+  gap: 10px; 
 }
 
 .nav-dot {
-  width: 10px; /* Dot width */
-  height: 10px; /* Dot height */
-  border-radius: 50%; /* Make them circular */
-  background-color: gray; /* Dot color */
-  text-decoration: none; /* Remove underline */
-  position: relative; /* Required for tooltip */
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+  background-color: gray; 
+  text-decoration: none; 
+  position: relative; 
 }
 
 .nav-dot:hover {
-  background-color: black; /* Change color on hover */
+  background-color: black; 
 }
 
 .nav-dot:hover::after {
-  content: attr(title); /* Show the title on hover */
+  content: attr(title); 
   position: absolute;
-  left: 15px; /* Adjust as needed for tooltip position */
-  background: black; /* Tooltip background color */
-  color: white; /* Tooltip text color */
+  left: 15px; 
+  background: black; 
   padding: 5px;
   border-radius: 4px;
-  white-space: nowrap; /* Prevent text wrapping */
-  z-index: 10; /* Ensure tooltip is above other elements */
+  white-space: nowrap; 
+  z-index: 10; 
 }

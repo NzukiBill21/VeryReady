@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import products from '../data/products'; // Import the product data from products.js
+import products from '../data/products'; 
 
 const ProductPage = ({ addToCart }) => {
-  const { id } = useParams();  // Get the product id from the URL
+  const { id } = useParams();  
 
   const product = products.find((item) => item.id === parseInt(id));
 
@@ -12,8 +12,8 @@ const ProductPage = ({ addToCart }) => {
   }
 
   const handleAddToCart = () => {
-    addToCart(product); // Add product to cart
-    alert(`${product.name} has been added to your cart!`); // Notification
+    addToCart(product);  
+    alert(`${product.name} has been added to your cart!`); 
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavigationDots.css'; // Make sure you create this CSS file
+import './NavigationDots.css'; 
 
 const NavigationDots = () => {
   return (

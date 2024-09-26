@@ -6,21 +6,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #b3dae6, #20b1c4); /* Gradient background */
-  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(135deg, #b3dae6, #20b1c4);
+  border-radius: 10px; 
   padding: 20px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(53, 43, 43, 0.3); /* Deeper shadow */
-}
+  box-shadow: 0 4px 20px rgba(53, 43, 43, 0.3);}
 
 .header-title {
-  font-size: 48px; /* Larger font size */
-  color: #071847; /* White text color */
+  font-size: 48px; 
+  color: #071847; 
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for text */
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); }
 
 
 .products-grid {

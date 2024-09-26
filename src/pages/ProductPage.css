@@ -7,37 +7,37 @@
 
 .product-title {
   font-size: 36px;
-  color: #000000; /* Darker color for product title */
+  color: #000000; 
 }
 .product.description {
-  font-size: 20px; /* Increase the font size for better readability */
-  color: #160b0b; /* Ensure the description text is white for visibility */
-  line-height: 1.5; /* Add line height for better spacing */
-  padding: 10px; /* Add some padding around the text */
-  background-color: rgba(0, 0, 0, 0.7); /* Optional: Background for contrast */
-  border-radius: 5px; /* Rounded corners for aesthetics */
+  font-size: 20px; 
+  color: #160b0b; 
+  line-height: 1.5; 
+  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 5px; 
 }
 
 
 .product-page-container {
-  background-color: rgba(0, 0, 0, 0.9); /* More opaque matte black */
+  background-color: rgba(0, 0, 0, 0.9); 
   color: white;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
-  max-width: 800px; /* Adjust based on layout */
+  max-width: 800px; 
 }
 
 .product-price {
   font-size: 24px;
-  color: #000000; /* Darker color for price */
+  color: #000000;
 }
 
 .product-page img {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 15px 0px #ffcc00; /* Glowing border around the product image */
+  box-shadow: 0px 0px 15px 0px #ffcc00; 
 }
 
 button {
@@ -52,7 +52,7 @@ button {
 
 .add-to-cart-button,
 .go-back-button {
-  margin: 10px; /* Space between buttons */
+  margin: 10px; 
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
@@ -61,7 +61,7 @@ button {
 }
 
 .add-to-cart-button:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838; 
 }
 
 button:hover {
@@ -70,10 +70,10 @@ button:hover {
 }
 
 .go-back-button {
-  background-color: #007bff; /* Blue background */
+  background-color: #007bff; 
   color: white;
 }
 
 .go-back-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
